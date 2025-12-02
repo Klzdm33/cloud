@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralMesh - Decentralized AI Computing Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🧠</span>
+                <span class="brand-text">NeuralMesh</span>
+                <span class="brand-beta">BETA</span>
+            </div>
+            <div class="nav-links">
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#marketplace" class="nav-link">Marketplace</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#docs" class="nav-link">Docs</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary" id="connect-wallet">
+                    <span class="btn-icon">🔗</span>
+                    Connect Wallet
+                </button>
+                <button class="btn-primary" id="get-started">
+                    Get Started
+                </button>
+            </div>
+            <div class="nav-mobile">
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Decentralized AI Infrastructure</span>
+                </div>
+                <h1 class="hero-title">
+                    Access <span class="gradient-text">Affordable GPU Power</span><br>
+                    for Your AI/ML Workloads
+                </h1>
+                <p class="hero-description">
+                    Deploy, train, and scale machine learning models on a decentralized network of high-performance GPUs. 
+                    Up to 85% cheaper than traditional cloud providers with complete data sovereignty.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">1,247</div>
+                        <div class="stat-label">Active GPUs</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">$2.34/hr</div>
+                        <div class="stat-label">Avg. Price H100</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">99.2%</div>
+                        <div class="stat-label">Uptime SLA</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large" id="start-training">
+                        <span>🚀</span>
+                        Start Training
+                    </button>
+                    <button class="btn-secondary btn-large" id="view-marketplace">
+                        <span>📊</span>
+                        Browse GPUs
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="neural-network">
+                    <div class="node node-1"></div>
+                    <div class="node node-2"></div>
+                    <div class="node node-3"></div>
+                    <div class="connection connection-1"></div>
+                    <div class="connection connection-2"></div>
+                    <div class="gpu-card">
+                        <div class="gpu-icon">🎮</div>
+                        <div class="gpu-specs">
+                            <div class="gpu-model">NVIDIA H100</div>
+                            <div class="gpu-details">80GB HBM3 • PCIe</div>
+                            <div class="gpu-price">$2.34/hr</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built for AI/ML Excellence</h2>
+                <p class="section-description">
+                    Purpose-built infrastructure designed specifically for machine learning and AI workloads
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">High Performance</h3>
+                    <p class="feature-description">
+                        Access latest H100, A100, and RTX 4090 GPUs with optimized CUDA environments and pre-installed ML frameworks.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Data Sovereignty</h3>
+                    <p class="feature-description">
+                        Your data never leaves your control. Full encryption, regional selection, and compliance with enterprise standards.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Cost Effective</h3>
+                    <p class="feature-description">
+                        Up to 85% savings compared to AWS/GCP. Pay only for what you use with no hidden fees or long-term commitments.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">Global Network</h3>
+                    <p class="feature-description">
+                        Deploy close to your users worldwide. Edge computing reduces latency and improves model serving performance.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="feature-title">DeFi Integration</h3>
+                    <p class="feature-description">
+                        Pay with crypto, stake tokens for discounts, and participate in governance of the network protocol.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Advanced Analytics</h3>
+                    <p class="feature-description">
+                        Real-time monitoring, cost tracking, and performance optimization insights for all your training jobs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become a Provider Section -->
+    <section class="become-provider" id="become-provider">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Share Your Hardware & <span class="gradient-text">Earn Rewards</span></h2>
+                <p class="section-description">
+                    Monetize your idle computing resources by providing CPU, GPU, memory, and storage to the NeuralMesh network
+                </p>
+            </div>
+            <div class="provider-content">
+                <div class="provider-info">
+                    <div class="provider-benefits">
+                        <h3 class="benefits-title">Why Become a Provider?</h3>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">💰</div>
+                                <div class="benefit-text">
+                                    <h4>Earn Passive Income</h4>
+                                    <p>Get paid for sharing your unused computing resources</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🔒</div>
+                                <div class="benefit-text">
+                                    <h4>Data Privacy</h4>
+                                    <p>Your hardware, your rules. Complete control over shared resources</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">⚡</div>
+                                <div class="benefit-text">
+                                    <h4>Easy Setup</h4>
+                                    <p>One-click installation. No technical expertise required</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🌍</div>
+                                <div class="benefit-text">
+                                    <h4>Global Network</h4>
+                                    <p>Join a worldwide community of compute providers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-types">
+                        <h3 class="resource-title">Resources You Can Share</h3>
+                        <div class="resource-grid">
+                            <div class="resource-card">
+                                <div class="resource-icon">🔧</div>
+                                <h4>CPU Power</h4>
+                                <p>Share your processor cores for general computation</p>
+                                <div class="resource-usage" id="cpu-usage">
+                                    <div class="usage-bar">
+                                        <div class="usage-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="usage-text">0% usage</span>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">🎮</div>
+                                <h4>GPU Power</h4>
+                                <p>Provide GPU resources for AI/ML workloads</p>
+                                <div class="resource-usage" id="gpu-usage">
+                                    <div class="usage-bar">
+                                        <div class="usage-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="usage-text">0% usage</span>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">💾</div>
+                                <h4>Memory</h4>
+                                <p>Share available RAM for data processing</p>
+                                <div class="resource-usage" id="memory-usage">
+                                    <div class="usage-bar">
+                                        <div class="usage-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="usage-text">0% usage</span>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">💿</div>
+                                <h4>Storage</h4>
+                                <p>Provide disk space for distributed storage</p>
+                                <div class="resource-usage" id="storage-usage">
+                                    <div class="usage-bar">
+                                        <div class="usage-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="usage-text">0% usage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="provider-controls">
+                    <div class="provider-status-card">
+                        <h3>Provider Dashboard</h3>
+                        <div class="status-indicators">
+                            <div class="status-item">
+                                <span class="status-label">Network Status:</span>
+                                <span class="status-value" id="network-status">Offline</span>
+                                <div class="status-dot" id="network-dot"></div>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">Provider Status:</span>
+                                <span class="status-value" id="provider-status">Inactive</span>
+                                <div class="status-dot" id="provider-dot"></div>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">Earnings:</span>
+                                <span class="status-value" id="earnings">$0.00</span>
+                            </div>
+                        </div>
+                        <div class="provider-actions">
+                            <button class="btn-primary btn-large" id="start-provider">
+                                <span>🚀</span>
+                                Start Sharing
+                            </button>
+                            <button class="btn-secondary btn-large" id="stop-provider">
+                                <span>⏹️</span>
+                                Stop Sharing
+                            </button>
+                        </div>
+                        <div class="advanced-settings">
+                            <details>
+                                <summary>Advanced Configuration</summary>
+                                <div class="settings-grid">
+                                    <div class="setting-item">
+                                        <label for="cpu-limit">CPU Usage Limit (%):</label>
+                                        <input type="range" id="cpu-limit" min="10" max="90" value="50">
+                                        <span id="cpu-limit-value">50%</span>
+                                    </div>
+                                    <div class="setting-item">
+                                        <label for="memory-limit">Memory Usage Limit (%):</label>
+                                        <input type="range" id="memory-limit" min="20" max="80" value="60">
+                                        <span id="memory-limit-value">60%</span>
+                                    </div>
+                                    <div class="setting-item">
+                                        <label for="auto-start">
+                                            <input type="checkbox" id="auto-start">
+                                            Auto-start on system boot
+                                        </label>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="system-info">
+                        <h4>Your System</h4>
+                        <div class="info-grid" id="system-info">
+                            <div class="info-item">
+                                <span class="info-label">CPU Cores:</span>
+                                <span class="info-value" id="cpu-cores">Detecting...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">GPU Available:</span>
+                                <span class="info-value" id="gpu-available">Detecting...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Memory:</span>
+                                <span class="info-value" id="memory-amount">Detecting...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Storage:</span>
+                                <span class="info-value" id="storage-amount">Detecting...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Marketplace Preview -->
+    <section class="marketplace-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Live GPU Marketplace</h2>
+                <p class="section-description">
+                    Real-time availability and pricing from our global network of compute providers
+                </p>
+            </div>
+            <div class="marketplace-grid">
+                <div class="gpu-market-card">
+                    <div class="gpu-header">
+                        <div class="gpu-model">NVIDIA H100</div>
+                        <div class="gpu-availability available">Available</div>
+                    </div>
+                    <div class="gpu-specs">
+                        <div class="spec">
+                            <span class="spec-label">VRAM</span>
+                            <span class="spec-value">80GB HBM3</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Bandwidth</span>
+                            <span class="spec-value">3TB/s</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Location</span>
+                            <span class="spec-value">🇺🇸 San Francisco</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Provider</span>
+                            <span class="spec-value mono">0x742d...8f92</span>
+                        </div>
+                    </div>
+                    <div class="gpu-footer">
+                        <div class="gpu-price">$2.34/hr</div>
+                        <button class="btn-primary btn-rent">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="gpu-market-card">
+                    <div class="gpu-header">
+                        <div class="gpu-model">NVIDIA A100</div>
+                        <div class="gpu-availability available">Available</div>
+                    </div>
+                    <div class="gpu-specs">
+                        <div class="spec">
+                            <span class="spec-label">VRAM</span>
+                            <span class="spec-value">80GB HBM2e</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Bandwidth</span>
+                            <span class="spec-value">2TB/s</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Location</span>
+                            <span class="spec-value">🇩🇪 Frankfurt</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Provider</span>
+                            <span class="spec-value mono">0x1a3c...7d21</span>
+                        </div>
+                    </div>
+                    <div class="gpu-footer">
+                        <div class="gpu-price">$1.89/hr</div>
+                        <button class="btn-primary btn-rent">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="gpu-market-card">
+                    <div class="gpu-header">
+                        <div class="gpu-model">RTX 4090</div>
+                        <div class="gpu-availability busy">In Use</div>
+                    </div>
+                    <div class="gpu-specs">
+                        <div class="spec">
+                            <span class="spec-label">VRAM</span>
+                            <span class="spec-value">24GB GDDR6X</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Bandwidth</span>
+                            <span class="spec-value">1TB/s</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Location</span>
+                            <span class="spec-value">🇸🇬 Singapore</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Provider</span>
+                            <span class="spec-value mono">0x9f2a...4c73</span>
+                        </div>
+                    </div>
+                    <div class="gpu-footer">
+                        <div class="gpu-price">$0.67/hr</div>
+                        <button class="btn-secondary btn-rent" disabled>Reserved</button>
+                    </div>
+                </div>
+            </div>
+            <div class="marketplace-cta">
+                <button class="btn-secondary btn-large" id="view-full-marketplace">
+                    View Full Marketplace
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Transparent Pricing</h2>
+                <p class="section-description">
+                    No hidden fees, no long-term contracts. Pay only for what you use.
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Pay-as-you-go</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$0.67</span>
+                            <span class="price-period">/hr</span>
+                        </div>
+                        <p class="pricing-subtitle">For RTX 4090 GPUs</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ No setup fees</li>
+                        <li>✅ No minimum commitment</li>
+                        <li>✅ Real-time billing</li>
+                        <li>✅ Global availability</li>
+                        <li>✅ 99.9% uptime SLA</li>
+                    </ul>
+                    <button class="btn-secondary btn-full">Start Free Trial</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">H100 Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$2.34</span>
+                            <span class="price-period">/hr</span>
+                        </div>
+                        <p class="pricing-subtitle">For H100 80GB GPUs</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ Preemptible instances</li>
+                        <li>✅ Volume discounts</li>
+                        <li>✅ Priority support</li>
+                        <li>✅ Advanced monitoring</li>
+                        <li>✅ Custom SLAs</li>
+                    </ul>
+                    <button class="btn-primary btn-full">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">Custom</span>
+                            <span class="price-period">Pricing</span>
+                        </div>
+                        <p class="pricing-subtitle">For large deployments</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ Dedicated infrastructure</li>
+                        <li>✅ Custom networking</li>
+                        <li>✅ Compliance support</li>
+                        <li>✅ 24/7 support</li>
+                        <li>✅ Custom integrations</li>
+                    </ul>
+                    <button class="btn-secondary btn-full">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Scale Your AI Workloads?</h2>
+                <p class="cta-description">
+                    Join thousands of developers and enterprises already using NeuralMesh for their AI/ML infrastructure needs.
+                </p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large" id="get-started-cta">
+                        Start Building Today
+                    </button>
+                    <button class="btn-secondary btn-large" id="schedule-demo">
+                        Schedule Demo
+                    </button>
+                </div>
+                <div class="cta-trust">
+                    <span class="trust-text">Trusted by teams at</span>
+                    <div class="trust-logos">
+                        <div class="trust-logo">OpenAI</div>
+                        <div class="trust-logo">Anthropic</div>
+                        <div class="trust-logo">Hugging Face</div>
+                        <div class="trust-logo">Stability AI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="brand-icon">🧠</span>
+                        <span class="brand-text">NeuralMesh</span>
+                    </div>
+                    <p class="footer-description">
+                        Decentralized AI computing platform powering the next generation of machine learning workloads.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💬</a>
+                        <a href="#" class="social-link">📧</a>
+                        <a href="#" class="social-link">🔗</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Product</h4>
+                        <a href="#" class="footer-link">Features</a>
+                        <a href="#" class="footer-link">Pricing</a>
+                        <a href="#" class="footer-link">API</a>
+                        <a href="#" class="footer-link">Documentation</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Developers</h4>
+                        <a href="#" class="footer-link">Quick Start</a>
+                        <a href="#" class="footer-link">SDK</a>
+                        <a href="#" class="footer-link">Examples</a>
+                        <a href="#" class="footer-link">Status</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="#" class="footer-link">About</a>
+                        <a href="#" class="footer-link">Blog</a>
+                        <a href="#" class="footer-link">Careers</a>
+                        <a href="#" class="footer-link">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Legal</h4>
+                        <a href="#" class="footer-link">Privacy</a>
+                        <a href="#" class="footer-link">Terms</a>
+                        <a href="#" class="footer-link">Compliance</a>
+                        <a href="#" class="footer-link">Security</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 NeuralMesh. All rights reserved.</p>
+                <div class="footer-network">
+                    <span class="network-status">
+                        <span class="status-dot online"></span>
+                        Network Online
+                    </span>
+                    <span class="network-stats">1,247 GPUs • 99.2% Uptime</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/resource-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

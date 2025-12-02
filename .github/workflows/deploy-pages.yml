@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (prepare_deploy)
 
 on:
   push:
@@ -19,16 +19,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare site files
+      - name: Ensure unzip is available
+        run: sudo apt-get update && sudo apt-get install -y unzip || true
+
+      - name: Run prepare_deploy.sh
         run: |
-          rm -rf public
-          mkdir -p public
-          cp -a extracted/. public/
+          chmod +x ./prepare_deploy.sh || true
+          ./prepare_deploy.sh
+
+      - name: List deployable files
+        run: |
+          echo "Files in deployable/site:"
+          ls -la deployable/site || true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          path: ./deployable/site
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
